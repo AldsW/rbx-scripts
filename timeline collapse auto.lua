@@ -21,12 +21,10 @@ local tab = {
 for i , v in next, snowdin:GetChildren() do
     if v.IsA(v, 'UnionOperation') and v.Name == string.gsub(v.Name,'%D+','') then
         table.insert(tab.objects,v.Name)
-        for i , v3 in pairs(snowdin:GetChildren()) do
-            if table.find(tab.objects,v.Name) and v.IsA(v,'UnionOperation') and v ~= nil and v.Transparency ~= 1 then
-                firetouchinterest(hrp, v, 0)
-                if v ~= nil and v.Transparency ~= 1 then
-                    firetouchinterest(hrp, v, 1)
-                end
+        if table.find(tab.objects,v.Name) and v.IsA(v,'UnionOperation') and v ~= nil and v.Transparency ~= 1 then
+            firetouchinterest(hrp, v, 0)
+            if v ~= nil and v.Transparency ~= 1 then
+                firetouchinterest(hrp, v, 1)
             end
         end
     end
